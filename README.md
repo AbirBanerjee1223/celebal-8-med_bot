@@ -85,7 +85,7 @@ Follow these steps to get the bot running on your local machine:
     git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
     cd YOUR_REPOSITORY_NAME
     ```
-    (Replace `YOUR_USERNAME` and `YOUR_REPOSITORY_NAME` with your actual GitHub details)
+   
 
 2.  **Create and Activate a Virtual Environment:**
     It's highly recommended to use a virtual environment to manage dependencies.
@@ -105,12 +105,11 @@ Follow these steps to get the bot running on your local machine:
 4.  **Set Up Google Gemini API Key:**
     * Go to [Google AI Studio](https://aistudio.google.com/) and log in with your Google account.
     * Generate a new API key.
-    * Create a file named `.env` in the root of your `healthcare_info_bot` directory (the same folder as `requirements.txt`).
+    * Create a file named `.env` in the root of your `celebal-8-med_bot` directory (the same folder as `requirements.txt`).
     * Add your API key to the `.env` file like this:
         ```
         GOOGLE_API_KEY="YOUR_ACTUAL_GEMINI_API_KEY_HERE"
         ```
-        **Important:** Do NOT commit your `.env` file to GitHub! It's already included in the `.gitignore` provided.
 
 5.  **Prepare the Vector Store (If not already committed):**
     * Since this repository *includes* the `vectorstore/db_faiss` folder (as it's small), you generally don't need to run `create_vector_db.py` on the first setup.
