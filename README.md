@@ -141,50 +141,45 @@ streamlit run streamlit_app.py
 ```
 This will open the application in your default web browser (usually at http://localhost:8501).
 
-☁️ Deployment to Streamlit Cloud
-Your bot is set up for easy deployment to Streamlit Cloud.
+## ☁️ Deployment to Streamlit Cloud
 
-Prerequisites for Deployment
-A GitHub account.
+Your Healthcare Info Bot is set up for easy deployment as a web application on Streamlit Cloud.
 
-A Streamlit Cloud account (you can sign up with GitHub).
+### Prerequisites for Deployment
 
-Your project code pushed to a public GitHub repository.
+* A GitHub account.
+* A Streamlit Cloud account (you can sign up with your GitHub account).
+* Your project code, including the `data/` folder and the `vectorstore/db_faiss` folder, committed and pushed to a **public** GitHub repository.
 
-Deployment Steps
-Push Your Code to GitHub:
-Ensure all your project files (including the data/ folder and the vectorstore/db_faiss folder) are committed and pushed to your GitHub repository.
+### Deployment Steps
 
-Bash
-```
-git add .
-git commit -m "Ready for Streamlit Cloud deployment"
-git push origin main
-```
+1.  **Push Your Code to GitHub:**
+    Ensure all your project files (including the `data/` folder and the `vectorstore/db_faiss` folder) are committed and pushed to your GitHub repository's `main` branch.
 
-Deploy on Streamlit Cloud:
+    ```bash
+    git add .
+    git commit -m "Ready for Streamlit Cloud deployment"
+    git push origin main
+    ```
 
-Go to Streamlit Cloud.
+2.  **Deploy on Streamlit Cloud:**
+    * Go to [Streamlit Cloud](https://share.streamlit.io/).
+    * Log in to your workspace.
+    * Click on "New app" in your workspace.
+    * Select "From existing repo".
+    * Connect your GitHub account and select your repository for the Healthcare Info Bot.
+    * Configure the deployment settings:
+        * **Repository:** `YOUR_USERNAME/YOUR_REPOSITORY_NAME` (e.g., `my-github-user/healthcare-info-bot`)
+        * **Branch:** `main` (or the branch where your code is)
+        * **Main file path:** `streamlit_app.py`
+    * **Add Secrets (Important for API Key):**
+        * Expand the "Advanced settings" section.
+        * In the "Secrets" text area, add your `GOOGLE_API_KEY`.
+        * **Crucially, enter it exactly like this (without quotes around the key itself):**
+            ```
+            GOOGLE_API_KEY=YOUR_ACTUAL_GEMINI_API_KEY_HERE
+            ```
+            (Replace `YOUR_ACTUAL_GEMINI_API_KEY_HERE` with the actual API key you generated from Google AI Studio.)
+    * Click "Deploy!"
 
-Log in and click on "New app" in your workspace.
-
-Select "From existing repo".
-
-Connect your GitHub account and select your repository.
-
-Configure the deployment settings:
-
-Repository: YOUR_USERNAME/YOUR_REPOSITORY_NAME
-
-Branch: main (or your primary branch)
-
-Main file path: streamlit_app.py
-
-Add Secrets (Important for API Key): Expand the "Advanced settings" section. Add your GOOGLE_API_KEY as a secret. It should look like this:
-
-GOOGLE_API_KEY="YOUR_ACTUAL_GEMINI_API_KEY_HERE"
-(When pasting into Streamlit secrets, enter GOOGLE_API_KEY=YOUR_ACTUAL_GEMINI_API_KEY_HERE without the quotes around the key itself.)
-
-Click "Deploy!"
-
-Streamlit Cloud will now build and deploy your application. The first deployment might take a few minutes as it installs all dependencies and sets up the environment.
+Streamlit Cloud will now build and deploy your application. The first deployment might take a few minutes as it installs all dependencies and sets up the environment. Once deployed, you'll get a unique URL to access your live chatbot!
