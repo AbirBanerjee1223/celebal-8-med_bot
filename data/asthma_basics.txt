@@ -1,0 +1,31 @@
+# Asthma: Basic Information and Management
+
+## What is Asthma?
+Asthma is a chronic (long-lasting) lung disease that inflames and narrows the airways. It causes periods of wheezing, chest tightness, shortness of breath, and coughing. The inflammation and narrowing of airways can lead to reduced airflow to the lungs.
+
+## Common Symptoms of Asthma
+Asthma symptoms can vary from person to person. You may have infrequent asthma attacks, or you may have symptoms only at certain times — such as when exercising — or all the time.
+* **Shortness of breath:** Feeling breathless, especially during activity.
+* **Chest tightness or pain:** A feeling of pressure or squeezing in the chest.
+* **Wheezing:** A whistling or squeaky sound when breathing, especially when exhaling. This is a common sign of asthma in children.
+* **Coughing:** Can be dry or with mucus, often worse at night or early morning, or triggered by exercise or cold air.
+
+## Asthma Triggers
+Asthma symptoms can be triggered by various factors, which vary among individuals. Common triggers include:
+* **Allergens:** Pollen, dust mites, pet dander, mold.
+* **Irritants:** Tobacco smoke, air pollution, chemical fumes, strong odors.
+* **Respiratory infections:** Colds, flu, and other viral infections.
+* **Physical activity:** Exercise-induced asthma.
+* **Cold air.**
+* **Stress and strong emotions.**
+* **Certain medications:** Beta-blockers, aspirin, NSAIDs.
+
+## Asthma Management (General Principles)
+Asthma is a chronic condition that requires ongoing management. While there's no cure, symptoms can be controlled to live a full, active life.
+* **Asthma Action Plan:** Work with your doctor to develop a personalized plan that outlines daily medications, how to handle worsening symptoms, and what to do in an emergency.
+* **Medications:**
+    * **Quick-relief (rescue) inhalers:** For immediate relief of symptoms (e.g., albuterol).
+    * **Long-term control medications:** Taken daily to prevent symptoms and reduce airway inflammation (e.g., inhaled corticosteroids).
+* **Identify and Avoid Triggers:** Once you know your triggers, take steps to minimize exposure.
+* **Monitor Symptoms:** Keep track of your symptoms and peak flow readings (if using a peak flow meter).
+* **Regular Doctor Visits:** For monitoring and adjusting your treatment plan.
