@@ -1,199 +1,208 @@
-Okay, fantastic\! I've got your repository link.
 
-Here is the complete `README.md` markdown text, fully customized for your repository: `https://github.com/AbirBanerjee1223/celebal-8-med_bot`.
-
-Copy and paste this entire content into your `README.md` file in the root of your `celebal-8-med_bot` repository.
-
------
-
-```markdown
 # ⚕️ Healthcare Info Bot (RAG Q&A Chatbot)
 
-This project implements a Retrieval-Augmented Generation (RAG) Q&A chatbot designed to provide information on common healthcare topics. It leverages document retrieval from a local knowledge base and the power of generative AI (Google Gemini API) to provide intelligent, context-aware responses.
+This project implements a **Retrieval-Augmented Generation (RAG)** Q&A chatbot designed to provide information on common healthcare topics. It uses a local knowledge base combined with **Google Gemini 1.5 Flash API** for intelligent, fact-checked answers.
 
-The bot can be run locally via a terminal interface or deployed as an interactive web application using Streamlit.
+You can interact with the bot via a **terminal interface** or an **interactive web app using Streamlit**.
+
+---
 
 ## ✨ Features
 
-* **Retrieval-Augmented Generation (RAG):** Combines information retrieval with a Large Language Model for accurate, fact-checked responses.
-* **Generative AI:** Powered by the **Google Gemini 1.5 Flash API** for intelligent and human-like answer generation.
-* **Local Knowledge Base:** Uses a FAISS vector store built from curated healthcare documents (provided in the `data/` directory).
-* **FAISS Vector Store:** Efficiently stores and retrieves document embeddings for quick context lookup. The vector store (`vectorstore/db_faiss`) is committed directly to this repository due to its small size (~500KB) for simplified deployment.
-* **Chat History & Memory:** The Streamlit web application remembers previous conversation turns for a more natural interaction.
-* **Streamlit Web UI:** An intuitive, interactive web interface for the chatbot.
-* **Terminal Interface:** A command-line version (`chatbot_app.py`) for quick local testing and debugging.
+- 🔍 **RAG (Retrieval-Augmented Generation):** Combines semantic search with generative AI for accurate answers grounded in your documents.
+- 🧠 **Google Gemini 1.5 Flash API:** Generates human-like responses based on context.
+- 📚 **Local Knowledge Base:** Uses curated healthcare documents stored in `data/`.
+- ⚡ **FAISS Vector Store:** Enables fast and accurate document retrieval.
+- 💬 **Chat History & Memory:** Maintains conversational context in the web UI.
+- 🌐 **Streamlit Web App:** A sleek and responsive chatbot interface.
+- 🖥️ **Terminal Interface:** Quick testing and usage through the command line.
+- 📦 **Self-contained Deployment:** Easily deployable on Streamlit Cloud with no external database required.
+
+---
 
 ## 🧠 Knowledge Base Topics
 
-This bot is equipped to answer questions on the following healthcare topics, drawing information directly from its internal knowledge base:
+The bot is capable of answering questions on the following healthcare topics:
 
-* **Common Illnesses & Conditions:**
-    * Anxiety (Basics)
-    * Asthma (Basic Info)
-    * Breast Cancer
-    * Common Cold
-    * Dengue Fever
-    * Diabetes (Type 1 & 2 Basics)
-    * Headaches (Common Types: Tension, Migraine, Cluster)
-    * Hypertension (High Blood Pressure)
-    * Malaria (Basics)
-    * Pneumonia (Children)
-    * Polycystic Ovary Syndrome (PCOS)
-    * Post-Traumatic Stress Disorder (PTSD)
-* **General Health & Wellness:**
-    * Basic First Aid (Minor Cuts, Scrapes, Burns, Sprains)
-    * Basic Nutrition Guidelines
-    * Mental Health Basics
-    * Sleep Hygiene (Tips for Better Sleep)
-    * Vaccination Basics
+### Common Illnesses
+- Anxiety (Basics)
+- Asthma (Basics)
+- Breast Cancer
+- Common Cold
+- Dengue Fever
+- Diabetes (Type 1 & 2 Basics)
+- Headaches (Tension, Migraine, Cluster)
+- Hypertension (High Blood Pressure)
+- Malaria (Basics)
+- Pneumonia (Children)
+- Polycystic Ovary Syndrome (PCOS)
+- Post-Traumatic Stress Disorder (PTSD)
 
-**Disclaimer:** This bot provides general health information for educational purposes and should not replace professional medical advice. Always consult a qualified healthcare professional for diagnosis, treatment, and medical advice.
+### General Health & Wellness
+- Basic Nutrition Guidelines
+- Sleep Hygiene (Tips for Better Sleep)
+- Mental Health Basics
+- Basic First Aid (Cuts, Scrapes, Burns, Sprains)
+- Vaccination Basics
 
-## 🚀 Technologies Used
+> **Disclaimer:** This chatbot provides general health information only. For medical diagnosis or treatment, consult a certified healthcare professional.
 
-* **Python 3.9+**
-* **LangChain:** Framework for building LLM applications.
-* **Streamlit:** For creating the interactive web UI.
-* **Google Gemini API:** The Generative AI model backend.
-* **Hugging Face `sentence-transformers`:** For creating document embeddings.
-* **FAISS:** For efficient similarity search in the vector store.
-* `python-dotenv`: For secure management of API keys.
+---
 
-## 📦 Project Structure
+## 🚀 Tech Stack
+
+- **Python 3.9+**
+- **LangChain:** LLM application framework
+- **Streamlit:** Web app interface
+- **Google Gemini API:** LLM backend
+- **HuggingFace `sentence-transformers`:** For document embeddings
+- **FAISS:** Fast similarity search
+- **python-dotenv:** API key management
+
+---
+
+## 📂 Project Structure
 
 ```
 
-celebal-8-med\_bot/
-├── data/
+healthcare\_info\_bot/
+├── data/                    # Raw text/PDF health documents
 │   ├── anxiety\_basics.txt
 │   ├── breast\_cancer.txt
-│   └── ... (all your healthcare text/pdf files)
+│   └── ...
 ├── vectorstore/
-│   └── db\_faiss/       \<-- Pre-built FAISS vector store (committed to repo)
-│       ├── index.faiss
-│       └── index.faiss.metadata.json
-├── .env                \<-- Your API key (local only, NOT committed to Git)
-├── requirements.txt    \<-- Project dependencies
-├── create\_vector\_db.py \<-- Script to create/update the vector store locally
-├── chatbot\_app.py      \<-- Terminal-based Q\&A bot
-└── streamlit\_app.py    \<-- Streamlit web application
+│   └── db\_faiss/            # FAISS vector database (pre-built)
+├── .env                     # Your API key (excluded from Git)
+├── requirements.txt         # Python dependencies
+├── create\_vector\_db.py      # Script to build/update the vector DB
+├── chatbot\_app.py           # Terminal-based chatbot
+└── streamlit\_app.py         # Streamlit web application
 
 ````
 
-## ⚙️ Local Setup and Run
+---
 
-Follow these steps to get the bot running on your local machine:
+## ⚙️ Local Setup
 
-### Prerequisites
+### ✅ Prerequisites
 
-* Python 3.9 or higher installed.
-* `git` installed.
+- Python 3.9 or later
+- Git
 
-### Installation
+---
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone [https://github.com/AbirBanerjee1223/celebal-8-med_bot.git](https://github.com/AbirBanerjee1223/celebal-8-med_bot.git)
-    cd celebal-8-med_bot
-    ```
+### 🛠 Installation Steps
 
-2.  **Create and Activate a Virtual Environment:**
-    It's highly recommended to use a virtual environment to manage dependencies.
-    ```bash
-    python -m venv venv
-    # On Windows:
-    .\venv\Scripts\activate
-    # On macOS/Linux:
-    source venv/bin/activate
-    ```
+1. **Clone the Repository:**
 
-3.  **Install Dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+cd YOUR_REPOSITORY_NAME
+````
 
-4.  **Set Up Google Gemini API Key:**
-    * Go to [Google AI Studio](https://aistudio.google.com/) and log in with your Google account.
-    * Generate a new API key.
-    * Create a file named `.env` in the root of your `celebal-8-med_bot` directory (the same folder as `requirements.txt`).
-    * Add your API key to the `.env` file like this:
-        ```
-        GOOGLE_API_KEY="YOUR_ACTUAL_GEMINI_API_KEY_HERE"
-        ```
-        **Important:** Do NOT commit your `.env` file to GitHub! It's already included in the `.gitignore` provided.
+2. **Create and Activate Virtual Environment:**
 
-5.  **Update the Vector Store (Optional):**
-    * This repository already includes a pre-built `vectorstore/db_faiss` folder. You generally don't need to run `create_vector_db.py` on the first setup.
-    * However, if you add or modify documents in the `data/` folder, you *must* run this script to update your knowledge base:
-        ```bash
-        python create_vector_db.py
-        ```
-    * After running, you would then need to commit the updated `vectorstore/db_faiss` to your Git repository for the changes to reflect in deployed versions.
+```bash
+python -m venv venv
+# Activate on Windows:
+.\venv\Scripts\activate
+# Activate on macOS/Linux:
+source venv/bin/activate
+```
 
-### Running the Chatbot
+3. **Install Dependencies:**
 
-You have two options to run the bot locally:
+```bash
+pip install -r requirements.txt
+```
 
-#### a) Terminal-based Chatbot (`chatbot_app.py`)
+4. **Set Up Google Gemini API Key:**
 
-For quick testing in your command line:
+* Visit [Google AI Studio](https://aistudio.google.com/), log in, and generate an API key.
+* Create a `.env` file in your root directory:
+
+```env
+GOOGLE_API_KEY=YOUR_ACTUAL_GEMINI_API_KEY_HERE
+```
+
+5. **(Optional) Rebuild the Vector Store:**
+
+If you update or add new documents in `data/`, rebuild the FAISS index:
+
+```bash
+python create_vector_db.py
+```
+
+---
+
+## 🧪 Running the Chatbot
+
+### 🔸 Option A: Terminal Interface
+
 ```bash
 python chatbot_app.py
-````
+```
 
-Type your questions at the prompt. Type `exit` to quit.
+Type your questions and get answers in the terminal. Type `exit` to quit.
 
-#### b) Streamlit Web Application (`streamlit_app.py`)
+---
 
-For the full interactive web UI:
+### 🔸 Option B: Web App with Streamlit
 
 ```bash
 streamlit run streamlit_app.py
 ```
 
-This will open the application in your default web browser (usually at `http://localhost:8501`).
+The app will launch in your default browser (usually at `http://localhost:8501`).
 
-## ☁️ Deployment to Streamlit Cloud
+---
 
-Your Healthcare Info Bot is set up for easy deployment as a web application on Streamlit Cloud.
+## ☁️ Deployment on Streamlit Cloud
 
-### Prerequisites for Deployment
+### 📋 Requirements
 
-  * A GitHub account.
-  * A Streamlit Cloud account (you can sign up with your GitHub account).
-  * Your project code, including the `data/` folder and the `vectorstore/db_faiss` folder, committed and pushed to a **public** GitHub repository.
+* GitHub account
+* Streamlit Cloud account (log in with GitHub)
+* Code pushed to a **public GitHub repository**
 
-### Deployment Steps
+---
 
-1.  **Push Your Code to GitHub:**
-    Ensure all your project files (including the `data/` folder and the `vectorstore/db_faiss` folder) are committed and pushed to your GitHub repository's `main` branch.
+### 🛫 Deployment Steps
 
-    ```bash
-    git add .
-    git commit -m "Ready for Streamlit Cloud deployment"
-    git push origin main
-    ```
+1. **Push Your Code to GitHub:**
 
-2.  **Deploy on Streamlit Cloud:**
+```bash
+git add .
+git commit -m "Deploy Healthcare Info Bot"
+git push origin main
+```
 
-      * Go to [Streamlit Cloud](https://share.streamlit.io/).
-      * Log in to your workspace.
-      * Click on "New app" in your workspace.
-      * Select "From existing repo".
-      * Connect your your GitHub account and select your repository: `AbirBanerjee1223/celebal-8-med_bot`.
-      * Configure the deployment settings:
-          * **Repository:** `AbirBanerjee1223/celebal-8-med_bot`
-          * **Branch:** `main` (or the branch where your code is)
-          * **Main file path:** `streamlit_app.py`
-      * **Add Secrets (Important for API Key):**
-          * Expand the "Advanced settings" section.
-          * In the "Secrets" text area, add your `GOOGLE_API_KEY`.
-          * **Crucially, enter it exactly like this (without quotes around the key itself):**
-            ```
-            GOOGLE_API_KEY=YOUR_ACTUAL_GEMINI_API_KEY_HERE
-            ```
-            (Replace `YOUR_ACTUAL_GEMINI_API_KEY_HERE` with the actual API key you generated from Google AI Studio.)
-      * Click "Deploy\!"
+2. **Deploy on [Streamlit Cloud](https://share.streamlit.io/):**
 
-Streamlit Cloud will now build and deploy your application. The first deployment might take a few minutes as it installs all dependencies and sets up the environment. Once deployed, you'll get a unique URL to access your live chatbot\!
+* Click “New app”
+* Choose your repo and branch
+* Set the **Main file path** as:
+
+```
+streamlit_app.py
+```
+
+3. **Add API Key in Streamlit Secrets:**
+
+In **Advanced Settings > Secrets**, add your Gemini API key like this:
+
+```env
+GOOGLE_API_KEY=YOUR_ACTUAL_GEMINI_API_KEY_HERE
+```
+
+✅ Click **Deploy**, and you’ll get a shareable public link to your healthcare chatbot!
+
+---
+
+## 📌 Notes
+
+* You can extend the bot by adding more `.txt` or `.pdf` files to the `data/` folder and regenerating the vector store.
+* All dependencies are pinned in `requirements.txt` for reproducibility.
+* Avoid committing the `.env` file; it's excluded by `.gitignore`.
+
 
